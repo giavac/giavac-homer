@@ -1,4 +1,4 @@
-gvacca-homer
+giavac-homer
 
 This is a Puppet module to install and configure Homer (https://github.com/sipcapture/homer)
 
@@ -43,4 +43,4 @@ giacomo.vacca@gmail.com
 Support
 -------
 
-Please log tickets and issues at our [Projects site](https://github.com/giavac/gvacca-homer)
+Please log tickets and issues at our [Projects site](https://github.com/giavac/giavac-homer)
