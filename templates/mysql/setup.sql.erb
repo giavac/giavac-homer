@@ -1,0 +1,17 @@
+CREATE DATABASE IF NOT EXISTS homer_data;
+USE homer_data;
+source <%= @base_dir %>/sql/schema_data.sql;
+
+CREATE DATABASE IF NOT EXISTS homer_configuration;
+USE homer_configuration;
+source <%= @base_dir %>/sql/schema_configuration.sql;
+
+CREATE DATABASE IF NOT EXISTS homer_statistic;
+USE homer_statistic;
+source <%= @base_dir %>/sql/schema_statistic.sql;
+
+GRANT ALL ON *.* TO '<%= @mysql_user %>'@'localhost' IDENTIFIED BY '<%= @mysql_password %>';
+-- Here we need to add an entry for homer-ui-api and one for homer-kamailio, same credentials but
+-- 172.17.0.0/16 address
+
+FLUSH PRIVILEGES;

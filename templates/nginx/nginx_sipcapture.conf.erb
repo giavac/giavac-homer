@@ -1,0 +1,21 @@
+server {
+
+	listen 80 default_server;
+
+	root <%= @web_dir %>/htdocs;
+	index index.html index.htm;
+
+	# Make site accessible from http://localhost/
+	server_name sipcapture;
+
+	location / {
+	    try_files $uri $uri/ /index.html;
+	}
+
+	location /api {
+	    include fastcgi_params;
+	    fastcgi_intercept_errors on;
+	    fastcgi_pass unix:<%= @phpfpm_socket %>;
+	    fastcgi_param  SCRIPT_FILENAME $document_root/api/index.php;
+        }
+}

@@ -1,0 +1,5 @@
+- Extend for debian
+- Re-adapt to CentOS
+- Optionally use apache
+- Otionally use Docker (Compose)
+- Review the several TODO notes spread around the code

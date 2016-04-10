@@ -1,0 +1,12 @@
+name    'gvacca-homer'
+version '0.1.0'
+source 'https://github.com/giavac/gvacca-homer'
+author 'gvacca'
+license 'Apache License, Version 2.0'
+summary 'Install and configure Homer'
+description 'Install and configure Homer sipcapture: kamailio, homer-ui and homer-api'
+project_page 'https://github.com/giavac/gvacca-homer'
+
+dependency 'puppetlabs/stdlib'
+dependency 'puppetlabs/mysql'
+dependency 'puppetlabs/apt'

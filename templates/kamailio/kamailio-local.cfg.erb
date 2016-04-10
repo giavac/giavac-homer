@@ -1,0 +1,5 @@
+#!define HOMER_LISTEN_STRING <%= @listen_proto %>:<%= @listen_if %>:<%= @listen_port %>
+#!define SQLOPS_DBURL "cb=>mysql://<%= @mysql_user %>:<%= @mysql_password %>@<%= @mysql_host %>/homer_statistic"
+#!define SIPCAPTURE_DBURL "mysql://<%= @mysql_user %>:<%= @mysql_password %>@<%= @mysql_host %>/homer_data"
+
+#!define MPATH "<%= @kamailio_mpath %>"
