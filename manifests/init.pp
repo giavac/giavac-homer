@@ -123,7 +123,7 @@ class homer(
         phpfpm_socket  => $phpfpm_socket,
         source_dir     => $source_dir,
         web_dir        => $web_dir,
-        web_user         => $web_user,
+        web_user       => $web_user,
     } ->
     class { 'homer::php':
         php_session_path => $php_session_path,

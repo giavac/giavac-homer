@@ -1,5 +1,5 @@
 node default {
-    class { homer:
+    class { 'homer':
         manage_mysql        => true,
         mysql_password      => 'astrongone',
         mysql_root_password => 'averystrongone',
