@@ -43,4 +43,4 @@ giacomo.vacca@gmail.com
 Support
 -------
 
-Please log tickets and issues at our [Projects site](http://projects.example.com)
+Please log tickets and issues at our [Projects site](https://github.com/giavac/gvacca-homer)
