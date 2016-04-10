@@ -11,11 +11,10 @@ class homer::kamailio(
     include 'homer::kamailio::apt'
 
     # TODO: refine this conditional
-    if ($::lsbdistcodename != 'trusty') {
-        $manage_systemd = true
-    }
-    else {
-        $manage_systemd = false
+    case $::operatingsystem {
+        'Ubuntu': { $manage_systemd = false }
+        'Debian': { $manage_systemd = false }
+        default : { $manage_systemd = true }
     }
 
     package { ['kamailio',
