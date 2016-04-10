@@ -1,0 +1,27 @@
+{
+  "name": "giavac-homer",
+  "version": "0.1.0",
+  "author": "giavac",
+  "summary": "Install and configure Homer",
+  "license": "Apache License, Version 2.0",
+  "source": "https://github.com/giavac/giavac-homer",
+  "project_page": "https://github.com/giavac/giavac-homer",
+  "issues_url": "https://github.com/giavac/giavac-homer/issues",
+  "description": "Install and configure Homer sipcapture: kamailio, homer-ui and homer-api",
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "Ubuntu",
+      "operatingsystemrelease": [
+        "14.04"
+      ]
+    },
+    {
+      "operatingsystem": "Debian"
+    },
+  ],
+  "dependencies": [
+    {"name":"puppetlabs/stdlib"},
+    {"name":"puppetlabs/mysql"},
+    {"name":"puppetlabs/apt"}
+  ]
+}
