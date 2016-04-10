@@ -47,12 +47,11 @@ class homer::kamailio(
         group   => 'kamailio',
         content => file('homer/kamailio/kamctlrc'),
         notify  => Service['kamailio'],
+    } ->
+    file { '/etc/default/kamailio':
+        ensure  => present,
+        content => file('homer/kamailio/default')
     }
-    #TODO: manage /etc/default/kamailio (with option to start)
-    # file { '/etc/default/kamailio':
-    #    ensure => present,
-    #    content => file('homer/kamailio/default')
-    #}
 
     if ($manage_systemd) {
         file { '/etc/sysconfig':
