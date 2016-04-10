@@ -10,6 +10,18 @@
 #   Path to install Homer mysql scripts
 #   Defaults to '/opt/homer'
 #
+# [*listen_if*]
+#   Interface for kamailio to listen to
+#   Defaults to '0.0.0.0'
+
+# [*listen_port*]
+#   Port for kamailio to listen to
+#   Defaults to '9060'
+#
+# [*listen_proto*]
+#   Proto for kamailio to listen to
+#   Defaults to 'udp'
+#
 # [*kamailio_etc_dir*]
 #   Path to install all the etc/ files for kamailio
 #   Defaults to '/etc/kamailio'
@@ -74,6 +86,9 @@
 #
 class homer(
     $base_dir            = $homer::params::base_dir,
+    $listen_if           = $homer::params::listen_if,
+    $listen_port         = $homer::params::listen_port,
+    $listen_proto        = $homer::params::listen_proto,
     $kamailio_etc_dir    = $homer::params::kamailio_etc_dir,
     $kamailio_mpath      = $homer::params::kamailio_mpath,
     $manage_mysql        = $homer::params::manage_mysql,

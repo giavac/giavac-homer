@@ -1,6 +1,9 @@
 # class homer::params
 class homer::params {
     $base_dir            = '/opt/homer'
+    $listen_if           = '0.0.0.0'
+    $listen_port         = '9060'
+    $listen_proto        = 'udp'
     $kamailio_etc_dir    = '/etc/kamailio'
     $kamailio_mpath      = '/usr/lib/x86_64-linux-gnu/kamailio/modules'
     $manage_mysql        = false
