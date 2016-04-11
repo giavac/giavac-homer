@@ -8,12 +8,17 @@ class homer::kamailio(
     $mysql_user,
     $mysql_password,
 ) {
-    include 'homer::kamailio::apt'
 
     # TODO: refine this conditional
     case $::operatingsystem {
-        'Ubuntu': { $manage_systemd = false }
-        'Debian': { $manage_systemd = false }
+        'Ubuntu': {
+            include 'homer::kamailio::apt'
+            $manage_systemd = false
+         }
+        'Debian': {
+            include 'homer::kamailio::apt'
+            $manage_systemd = false
+         }
         default : { $manage_systemd = true }
     }
 
