@@ -17,4 +17,5 @@ class homer::params {
     $web_dir             = '/var/www/sipcapture'
     $web_user            = 'www-data'
     $ui_admin_password   = undef
+    $use_docker          = false
 }
