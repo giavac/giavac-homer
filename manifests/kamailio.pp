@@ -54,7 +54,8 @@ class homer::kamailio(
     } ->
     file { '/etc/default/kamailio':
         ensure  => present,
-        content => file('homer/kamailio/default')
+        content => file('homer/kamailio/default'),
+        notify  => Service['kamailio'],
     }
 
     if ($manage_systemd) {
